@@ -2,9 +2,6 @@ import requests
 import tkinter as tk
 from tkinter import PhotoImage
 
-CANVAS = None
-QUOTE_TEXT = None
-
 
 def get_quote():
     global CANVAS, QUOTE_TEXT
@@ -47,4 +44,7 @@ def window_set():
     window.mainloop()
 
 
-window_set()
+if __name__ == "__main__":
+    CANVAS = None
+    QUOTE_TEXT = None
+    window_set()
