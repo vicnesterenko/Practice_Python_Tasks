@@ -23,28 +23,41 @@ def create_tables_and_insert_data():
     );
     """
 
-    insert_users_data = """
-    INSERT INTO users (name, department_id, salary)
-    VALUES
-        ('John', 1, 1000.0),
-        ('Alice', 2, 1200.0),
-        ('Bob', 1, 1500.0),
-        ('Carol', 3, 900.0),
-        ('David', 2, 800.0);
-    """
-
-    insert_department_data = """
-    INSERT OR REPLACE INTO department (department_id, bonus_rate)
-    VALUES
-        (1, 0.1),
-        (2, 0.2),
-        (3, 0.15);
-    """
-
     cursor.execute(create_users_table)
     cursor.execute(create_department_table)
-    cursor.execute(insert_users_data)
-    cursor.execute(insert_department_data)
+    conn.commit()
+
+    # Check if data exists before inserting
+    cursor.execute("SELECT COUNT(*) FROM users")
+    user_data_exists = cursor.fetchone()[0]
+
+    cursor.execute("SELECT COUNT(*) FROM department")
+    department_data_exists = cursor.fetchone()[0]
+
+    if not user_data_exists:
+        insert_users_data = """
+        INSERT INTO users (name, department_id, salary)
+        VALUES
+            ('John', 1, 1000),
+            ('Regina', 2, 1200),
+            ('Alice', 2, 1200),
+            ('Bob', 1, 1500),
+            ('Carol', 3, 900),
+            ('David', 2, 800),
+            ('Vic', 3, 500);
+        """
+        cursor.execute(insert_users_data)
+
+    if not department_data_exists:
+        insert_department_data = """
+        INSERT OR REPLACE INTO department (department_id, bonus_rate)
+        VALUES
+            (1, 0.1),
+            (2, 0.2),
+            (3, 0.15);
+        """
+        cursor.execute(insert_department_data)
+
     conn.commit()
     conn.close()
 
