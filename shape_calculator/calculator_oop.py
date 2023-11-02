@@ -1,4 +1,5 @@
 import math
+from abc import ABC, abstractclassmethod
 
 
 class Rectangle:
@@ -85,17 +86,18 @@ class Triangle:
             return "Triangle doesn't exist! Input another sides."
 
     def __str__(self):
-        components = [
-            "Your calculations are ready:",
-            "Shape: Triangle",
-            f"Side 1: {self.side_1}",
-            f"Side 2: {self.side_2}",
-            f"Side 3: {self.side_3}",
-            f"Type of triangle: {self.type_triangle()}",
-            f"Perimeter: {self.calculate_perimeter()}",
-            f"Area: {self.calculate_area()}",
-        ]
-        return "\n".join(components)
+        return "\n".join(
+            [
+                "Your calculations are ready:",
+                "Shape: Triangle",
+                f"Side 1: {self.side_1}",
+                f"Side 2: {self.side_2}",
+                f"Side 3: {self.side_3}",
+                f"Type of triangle: {self.type_triangle()}",
+                f"Perimeter: {self.calculate_perimeter()}",
+                f"Area: {self.calculate_area()}",
+            ]
+        )
 
 
 def main():
