@@ -6,7 +6,7 @@ The "Shape Calculator" is a Python program that allows users to perform basic ca
 This repo has 3 types of files:
    - `calculator.py` - logic with functions.
    - `calculator_oop.py` - logic with OOP.
-   - ` test.py` - tests file.
+   - `test.py` - tests file.
 
 Features:
 1. **Triangle Calculations:**
