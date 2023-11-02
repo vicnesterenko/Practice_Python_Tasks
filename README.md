@@ -1,4 +1,4 @@
-# Practice_Python_Task
+# Practice Python
 This Git repository has different tasks for practicing my Python knowledge.
 
 This repo has those folders:
