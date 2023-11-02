@@ -44,8 +44,3 @@ Usage Instructions:
 
 Example Output:
 - The program will display the shape type, triangle type (if applicable), perimeter, and area for the selected shape.
-
-Note:
-- Ensure that you provide valid input, such as positive numbers for side lengths and radii.
-- The program checks whether a valid triangle can be formed with the given sides based on the triangle inequality theorem.
-
