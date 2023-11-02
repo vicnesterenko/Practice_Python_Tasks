@@ -3,6 +3,11 @@
 Description:
 The "Shape Calculator" is a Python program that allows users to perform basic calculations for different geometric shapes, including triangles, circles, and rectangles. This README file provides an overview of the program's functionality and how to use it.
 
+This repo has 3 types of files:
+   - `calculator.py` - logic with functions.
+   - `calculator_oop.py` - logic with OOP.
+   - ` test.py` - tests file.
+
 Features:
 1. **Triangle Calculations:**
    - Calculate the perimeter of a triangle.
@@ -39,8 +44,3 @@ Usage Instructions:
 
 Example Output:
 - The program will display the shape type, triangle type (if applicable), perimeter, and area for the selected shape.
-
-Note:
-- Ensure that you provide valid input, such as positive numbers for side lengths and radii.
-- The program checks whether a valid triangle can be formed with the given sides based on the triangle inequality theorem.
-
